@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="finBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="rgba(16,185,129,0.1)" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#finBg)" rx="16"/>
+
+  <rect x="40" y="40" width="720" height="420" rx="12" fill="#090e17" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <circle cx="70" cy="70" r="6" fill="#ef4444" />
+  <circle cx="92" cy="70" r="6" fill="#f59e0b" />
+  <circle cx="114" cy="70" r="6" fill="#10b981" />
+  <text x="140" y="74" fill="#94a3b8" font-family="sans-serif" font-size="12">FinTrack Pro — High-Frequency Market Terminal</text>
+
+  <!-- Big Ticker Stat -->
+  <text x="70" y="125" fill="#f8fafc" font-family="sans-serif" font-weight="800" font-size="28">$4,281,950.40</text>
+  <text x="320" y="123" fill="#10b981" font-family="sans-serif" font-weight="bold" font-size="16">▲ +14.8% Today</text>
+  <text x="70" y="150" fill="#64748b" font-family="sans-serif" font-size="12">PORTFOLIO VOLATILITY INDEX: 0.12 (LOW)</text>
+
+  <!-- Candle/Bar Chart Visuals -->
+  <g transform="translate(70, 180)">
+    <rect x="0" y="120" width="22" height="110" fill="url(#barGrad)" rx="3"/>
+    <line x1="11" y1="90" x2="11" y2="240" stroke="#10b981" stroke-width="1.5"/>
+
+    <rect x="36" y="90" width="22" height="140" fill="url(#barGrad)" rx="3"/>
+    <line x1="47" y1="70" x2="47" y2="245" stroke="#10b981" stroke-width="1.5"/>
+
+    <rect x="72" y="140" width="22" height="90" fill="rgba(239,68,68,0.2)" stroke="#ef4444" rx="3"/>
+    <line x1="83" y1="120" x2="83" y2="240" stroke="#ef4444" stroke-width="1.5"/>
+
+    <rect x="108" y="70" width="22" height="160" fill="url(#barGrad)" rx="3"/>
+    <line x1="119" y1="50" x2="119" y2="245" stroke="#10b981" stroke-width="1.5"/>
+
+    <rect x="144" y="50" width="22" height="180" fill="url(#barGrad)" rx="3"/>
+    <line x1="155" y1="30" x2="155" y2="250" stroke="#10b981" stroke-width="1.5"/>
+
+    <rect x="180" y="100" width="22" height="130" fill="rgba(239,68,68,0.2)" stroke="#ef4444" rx="3"/>
+    <line x1="191" y1="80" x2="191" y2="240" stroke="#ef4444" stroke-width="1.5"/>
+
+    <rect x="216" y="40" width="22" height="190" fill="url(#barGrad)" rx="3"/>
+    <line x1="227" y1="20" x2="227" y2="250" stroke="#10b981" stroke-width="1.5"/>
+
+    <rect x="252" y="20" width="22" height="210" fill="url(#barGrad)" rx="3"/>
+    <line x1="263" y1="10" x2="263" y2="250" stroke="#10b981" stroke-width="1.5"/>
+
+    <!-- Order Book Mini Widget -->
+    <rect x="330" y="0" width="330" height="240" rx="8" fill="rgba(30,41,59,0.5)" stroke="rgba(255,255,255,0.06)"/>
+    <text x="350" y="30" fill="#94a3b8" font-family="sans-serif" font-weight="bold" font-size="12">REAL-TIME DEPTH CHART (L2)</text>
+    <line x1="350" y1="45" x2="640" y2="45" stroke="rgba(255,255,255,0.05)"/>
+    <text x="350" y="75" fill="#10b981" font-family="monospace" font-size="13">BIDS: $68,420.00  |  14.22 BTC</text>
+    <text x="350" y="105" fill="#10b981" font-family="monospace" font-size="13">BIDS: $68,418.50  |  28.90 BTC</text>
+    <text x="350" y="135" fill="#ef4444" font-family="monospace" font-size="13">ASKS: $68,422.00  |  19.14 BTC</text>
+    <text x="350" y="165" fill="#ef4444" font-family="monospace" font-size="13">ASKS: $68,425.50  |  34.02 BTC</text>
+    <rect x="350" y="190" width="290" height="25" rx="4" fill="rgba(99,102,241,0.2)"/>
+    <text x="360" y="207" fill="#818cf8" font-family="sans-serif" font-size="11">Rendering at locked 60 FPS via Canvas &amp; WebGL</text>
+  </g>
+</svg>

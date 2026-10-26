@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="comBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#1f2937" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#comBg)" rx="16"/>
+  <rect x="40" y="40" width="720" height="420" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <circle cx="70" cy="70" r="6" fill="#ef4444" />
+  <circle cx="92" cy="70" r="6" fill="#f59e0b" />
+  <circle cx="114" cy="70" r="6" fill="#10b981" />
+  <text x="140" y="74" fill="#94a3b8" font-family="sans-serif" font-size="12">NexusCommerce — Microservices Storefront &amp; Checkout Engine</text>
+
+  <!-- Storefront Grid Mock -->
+  <rect x="70" y="110" width="190" height="190" rx="8" fill="rgba(30,41,59,0.7)" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="165" cy="180" r="40" fill="#6366f1" opacity="0.3"/>
+  <text x="85" y="240" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14">Aero Pro Headset</text>
+  <text x="85" y="260" fill="#38bdf8" font-family="sans-serif" font-size="13">$299.00</text>
+  <rect x="85" y="275" width="80" height="18" rx="4" fill="#6366f1"/>
+  <text x="95" y="288" fill="#fff" font-family="sans-serif" font-size="10">INSTANT BUY</text>
+
+  <rect x="280" y="110" width="190" height="190" rx="8" fill="rgba(30,41,59,0.7)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="330" y="150" width="90" height="60" rx="6" fill="#10b981" opacity="0.3"/>
+  <text x="295" y="240" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14">Ergo Keyboard V2</text>
+  <text x="295" y="260" fill="#38bdf8" font-family="sans-serif" font-size="13">$189.00</text>
+  <rect x="295" y="275" width="80" height="18" rx="4" fill="#10b981"/>
+  <text x="305" y="288" fill="#fff" font-family="sans-serif" font-size="10">INSTANT BUY</text>
+
+  <rect x="490" y="110" width="240" height="320" rx="8" fill="rgba(15,23,42,0.9)" stroke="rgba(99,102,241,0.3)"/>
+  <text x="510" y="140" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14">CHECKOUT SUMMARY</text>
+  <line x1="510" y1="155" x2="710" y2="155" stroke="rgba(255,255,255,0.08)"/>
+  <text x="510" y="185" fill="#94a3b8" font-family="sans-serif" font-size="12">Subtotal</text>
+  <text x="660" y="185" fill="#f8fafc" font-family="sans-serif" font-size="12">$488.00</text>
+  <text x="510" y="215" fill="#94a3b8" font-family="sans-serif" font-size="12">Express Freight</text>
+  <text x="680" y="215" fill="#10b981" font-family="sans-serif" font-size="12">Free</text>
+  <text x="510" y="255" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="16">Total: $488.00</text>
+  <rect x="510" y="285" width="200" height="40" rx="6" fill="#6366f1"/>
+  <text x="545" y="310" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="13">Pay with Stripe</text>
+  <text x="515" y="360" fill="#64748b" font-family="sans-serif" font-size="11">✓ Webhooks confirmed across 4 replicas</text>
+  <text x="515" y="385" fill="#64748b" font-family="sans-serif" font-size="11">✓ Sub-second edge order caching</text>
+
+  <!-- Architecture banner -->
+  <rect x="70" y="325" width="400" height="105" rx="8" fill="rgba(30,41,59,0.5)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="90" y="355" fill="#a855f7" font-family="sans-serif" font-weight="bold" font-size="12">EVENT-DRIVEN BACKEND ARCHITECTURE</text>
+  <text x="90" y="380" fill="#cbd5e1" font-family="sans-serif" font-size="12">RabbitMQ Exchange &gt; Inventory Worker &gt; PostgreSQL Cluster</text>
+  <text x="90" y="405" fill="#10b981" font-family="sans-serif" font-size="12">Redis multi-region cache hit ratio: 98.4%</text>
+</svg>

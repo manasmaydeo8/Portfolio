@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vaultBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b" />
+      <stop offset="100%" stop-color="#1c2541" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#vaultBg)" rx="16"/>
+  <rect x="40" y="40" width="720" height="420" rx="12" fill="#0b1329" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <circle cx="70" cy="70" r="6" fill="#ef4444" />
+  <circle cx="92" cy="70" r="6" fill="#f59e0b" />
+  <circle cx="114" cy="70" r="6" fill="#10b981" />
+  <text x="140" y="74" fill="#94a3b8" font-family="sans-serif" font-size="12">ServerlessVault — Client-Side AES-GCM Encrypted Storage</text>
+
+  <!-- Lock Icon Center piece -->
+  <g transform="translate(180, 110)">
+    <rect x="0" y="0" width="440" height="320" rx="12" fill="rgba(20,30,55,0.8)" stroke="#06b6d4" stroke-width="1.5"/>
+    
+    <!-- Shield Graphic -->
+    <path d="M 220 50 L 300 85 L 300 170 Q 220 230 220 230 Q 220 230 140 170 L 140 85 Z" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="3"/>
+    <!-- Lock -->
+    <rect x="200" y="125" width="40" height="35" rx="5" fill="#06b6d4" />
+    <path d="M 208 125 L 208 105 Q 220 95 232 105 L 232 125" fill="none" stroke="#06b6d4" stroke-width="4"/>
+
+    <text x="220" y="265" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="16">ZERO-KNOWLEDGE ENVELOPE ENCRYPTION</text>
+    <text x="220" y="290" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="12">256-bit AES-GCM Key derived in Web Worker via PBKDF2</text>
+  </g>
+</svg>

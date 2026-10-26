@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fdba74" />
+    </linearGradient>
+  </defs>
+
+  <rect width="300" height="300" rx="150" fill="url(#avatarBg)"/>
+
+  <!-- Body / Hoodie -->
+  <path d="M 60 300 C 60 210 240 210 240 300 Z" fill="#1e293b"/>
+  <path d="M 120 230 L 150 270 L 180 230 Z" fill="#334155"/>
+
+  <!-- Neck -->
+  <rect x="135" y="170" width="30" height="40" fill="url(#skin)" rx="6"/>
+
+  <!-- Head -->
+  <ellipse cx="150" cy="140" rx="48" ry="54" fill="url(#skin)"/>
+
+  <!-- Hair -->
+  <path d="M 100 135 C 100 80 200 80 200 135 C 185 110 160 115 150 110 C 140 115 115 110 100 135 Z" fill="#1e1b4b"/>
+
+  <!-- Glasses -->
+  <rect x="115" y="130" width="28" height="20" rx="5" fill="none" stroke="#0f172a" stroke-width="4"/>
+  <rect x="157" y="130" width="28" height="20" rx="5" fill="none" stroke="#0f172a" stroke-width="4"/>
+  <line x1="143" y1="140" x2="157" y2="140" stroke="#0f172a" stroke-width="4"/>
+
+  <!-- Eyes behind glasses -->
+  <circle cx="129" cy="140" r="3.5" fill="#0f172a"/>
+  <circle cx="171" cy="140" r="3.5" fill="#0f172a"/>
+
+  <!-- Smile -->
+  <path d="M 138 165 Q 150 175 162 165" fill="none" stroke="#c2410c" stroke-width="3" stroke-linecap="round"/>
+</svg>
