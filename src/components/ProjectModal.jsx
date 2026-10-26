@@ -113,7 +113,7 @@ export default function ProjectModal({ project, onClose }) {
                 fontWeight: 600
               }}
             >
-              Featured Architecture
+              Commercial Case Study
             </span>
           )}
         </div>
@@ -129,7 +129,7 @@ export default function ProjectModal({ project, onClose }) {
         {/* Metrics Achieved */}
         <div style={{ marginBottom: '1.75rem' }}>
           <h4 style={{ fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
-            Impact &amp; Engineering Metrics
+            Verified Business &amp; Testing Outcomes
           </h4>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem' }}>
             {project.metrics.map((metric, idx) => (

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PROJECTS, PROJECT_CATEGORIES } from '../data/portfolioData';
-import { FolderGit2, ExternalLink, Info, Sparkles, TrendingUp } from 'lucide-react';
+import { FolderGit2, ExternalLink, Info, CheckCircle2, TrendingUp, ShieldCheck } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import LazyImage from './LazyImage';
 import ProjectModal from './ProjectModal';
@@ -21,13 +21,13 @@ export default function Projects() {
         <div className="section-header">
           <div className="section-tag">
             <FolderGit2 size={14} />
-            <span>Featured Work</span>
+            <span>Commercial Portfolio</span>
           </div>
           <h2 className="section-title">
-            Engineered For <span className="text-gradient">Scale &amp; Precision</span>
+            Case Studies That <span className="text-gradient">Deliver &amp; Sell</span>
           </h2>
           <p className="section-desc">
-            A curated portfolio of production applications, distributed microservices, and high-performance interactive web tools.
+            Production-grade web applications engineered with strict automated testing, sub-second response times, and conversion-optimized user journeys.
           </p>
         </div>
 
@@ -118,18 +118,18 @@ export default function Projects() {
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '0.35rem',
-                      background: 'rgba(15, 23, 42, 0.85)',
+                      background: 'rgba(15, 23, 42, 0.88)',
                       backdropFilter: 'blur(8px)',
                       border: '1px solid var(--border-glow)',
                       color: 'var(--accent-primary)',
-                      padding: '0.25rem 0.65rem',
+                      padding: '0.3rem 0.75rem',
                       borderRadius: 'var(--radius-full)',
                       fontSize: '0.75rem',
                       fontWeight: 600
                     }}
                   >
-                    <Sparkles size={12} />
-                    Featured
+                    <TrendingUp size={12} />
+                    High Impact
                   </div>
                 )}
               </div>
@@ -179,22 +179,22 @@ export default function Projects() {
                   {project.summary}
                 </p>
 
-                {/* Metric Callout */}
+                {/* Primary Outcome Metric */}
                 <div
                   style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.5rem',
-                    padding: '0.5rem 0.85rem',
+                    padding: '0.55rem 0.85rem',
                     borderRadius: 'var(--radius-sm)',
-                    background: 'rgba(99, 102, 241, 0.08)',
-                    border: '1px solid rgba(99, 102, 241, 0.2)',
+                    background: 'rgba(16, 185, 129, 0.08)',
+                    border: '1px solid rgba(16, 185, 129, 0.25)',
                     fontSize: '0.825rem',
-                    color: 'var(--accent-primary)',
-                    fontWeight: 500
+                    color: 'var(--accent-emerald)',
+                    fontWeight: 600
                   }}
                 >
-                  <TrendingUp size={14} />
+                  <ShieldCheck size={15} />
                   <span>{project.metrics[0]}</span>
                 </div>
 
@@ -236,7 +236,7 @@ export default function Projects() {
                     style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
                   >
                     <Info size={14} />
-                    <span>Architecture</span>
+                    <span>Case Study</span>
                   </button>
 
                   <div style={{ display: 'flex', gap: '0.6rem' }}>
@@ -245,7 +245,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-secondary btn-sm"
-                      title="Live Demo"
+                      title="Repository / Live Demo"
                       aria-label={`${project.title} live demo`}
                     >
                       <ExternalLink size={15} />
@@ -255,7 +255,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-secondary btn-sm"
-                      title="Source Code"
+                      title="GitHub Source"
                       aria-label={`${project.title} source code`}
                     >
                       <GithubIcon size={15} />

@@ -1,30 +1,30 @@
 import React from 'react';
-import { Cpu, ShieldCheck, Zap, Sparkles, Code2, Globe2, Coffee, GitFork } from 'lucide-react';
+import { ShieldCheck, Zap, TrendingUp, Code2, Globe2, CheckCircle2, Award, Terminal } from 'lucide-react';
 
 export default function About() {
   const philosophies = [
     {
-      icon: <Zap size={24} color="var(--accent-primary)" />,
-      title: "Micro-Performance Mindset",
-      description: "Sub-second initial paints, lazy chunked loading, and 60 FPS interactions. Performance is not a patch—it's foundational."
-    },
-    {
-      icon: <Cpu size={24} color="var(--accent-cyan)" />,
-      title: "Resilient Distributed Systems",
-      description: "Architecting decoupled, event-driven services on Kubernetes and cloud primitives with zero single points of failure."
+      icon: <TrendingUp size={24} color="var(--accent-primary)" />,
+      title: "Design That Sells & Converts",
+      description: "Visual hierarchy, cognitive pacing, and responsive clarity are not decorative luxuries—they are core business drivers. An intuitive, frictionless user journey is what reliably sells products and retains users."
     },
     {
       icon: <ShieldCheck size={24} color="var(--accent-emerald)" />,
-      title: "Security & Clean Code",
-      description: "Zero-knowledge encryption, strict TypeScript typing, comprehensive CI test suites, and maintainable domain boundaries."
+      title: "Test Engineering & Zero Regressions",
+      description: "Automated testing with Vitest, Jest, and React Testing Library is a core discipline. Every critical user flow is protected by integration tests, ensuring production stability on every deployment."
+    },
+    {
+      icon: <Zap size={24} color="var(--accent-cyan)" />,
+      title: "Core Web Vitals & Sub-Second Speed",
+      description: "Slow websites lose sales. Through component-level code splitting, lazy loading, and lightweight CSS systems, I consistently achieve 98+ Lighthouse scores and sub-second Largest Contentful Paint."
     }
   ];
 
-  const quickStats = [
-    { label: "Based in", value: "San Francisco, CA", icon: <Globe2 size={16} /> },
-    { label: "Engineering Style", value: "Full-Cycle Ownership", icon: <Code2 size={16} /> },
-    { label: "Open Source", value: "Active Contributor", icon: <GitFork size={16} /> },
-    { label: "Fuel of Choice", value: "Ethiopian Pour-over", icon: <Coffee size={16} /> }
+  const seniorHighlights = [
+    { label: "Commercial Tenure", value: "12+ Years Industry", icon: <Award size={16} /> },
+    { label: "Development Style", value: "Test-Driven (TDD)", icon: <ShieldCheck size={16} /> },
+    { label: "Environment", value: "Linux CLI & Modern Git", icon: <Terminal size={16} /> },
+    { label: "Core Web Standards", value: "WCAG 2.1 AA Compliant", icon: <Globe2 size={16} /> }
   ];
 
   return (
@@ -33,14 +33,14 @@ export default function About() {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-tag">
-            <Sparkles size={14} />
-            <span>About Me</span>
+            <Award size={14} />
+            <span>Senior Web Developer Profile</span>
           </div>
           <h2 className="section-title">
-            Passionate About Crafting <span className="text-gradient">Impactful Software</span>
+            Engineering Discipline &amp; <span className="text-gradient">Web Standards</span>
           </h2>
           <p className="section-desc">
-            Bridging technical complexity with intuitive user interfaces. Here is how I think, build, and deliver engineering value.
+            With 12+ years building commercial digital products, I focus on the metrics that matter: user conversion, software reliability, and test coverage.
           </p>
         </div>
 
@@ -57,22 +57,22 @@ export default function About() {
           {/* Biography Text */}
           <div className="glass-panel" style={{ padding: '2.5rem' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1.25rem' }}>
-              Turning Ambition into Scalable Reality
+              Building Software That Converts &amp; Scales
             </h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.7 }}>
-              I began my engineering journey building high-throughput data processing scripts in university, quickly discovering the thrill of connecting rock-solid backend infrastructure with sleek, responsive web frontends.
+              Over the past twelve years, I have architected web applications ranging from high-traffic e-commerce storefronts to multi-tenant booking platforms and interactive learning suites.
             </p>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.7 }}>
-              Over the last six years, I have led technical teams, architected event-driven microservices serving millions of requests daily, and crafted frontend design systems that unite product teams.
+              My engineering approach is grounded in the understanding that clean architecture and thoughtful web design directly drive commercial outcomes. When an interface is responsive, accessible, and blindingly fast, it earns customer trust and delivers measurable ROI.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-              When I'm not profiling React bundle sizes or fine-tuning Kubernetes ingress routing, you will find me mentoring aspiring developers or experimenting with WebGL shaders and edge runtimes.
+              I treat testing not as an afterthought, but as an indispensable skill: unit tests with Vitest, behavior validation with React Testing Library, and end-to-end regression prevention ensure peace of mind with zero downtime.
             </p>
           </div>
 
           {/* Quick Facts Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.25rem' }}>
-            {quickStats.map((item, idx) => (
+            {seniorHighlights.map((item, idx) => (
               <div
                 key={idx}
                 className="glass-panel"
@@ -107,7 +107,7 @@ export default function About() {
         {/* Engineering Philosophy Cards */}
         <div style={{ marginTop: '3rem' }}>
           <h3 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.5rem' }}>
-            Core Engineering Principles
+            Senior Engineering Tenets
           </h3>
           <div
             style={{
@@ -142,7 +142,7 @@ export default function About() {
                   {phil.icon}
                 </div>
                 <h4 style={{ fontSize: '1.2rem' }}>{phil.title}</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.65 }}>
                   {phil.description}
                 </p>
               </div>

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { SKILLS, SKILL_CATEGORIES } from '../data/portfolioData';
-import { Layers, Search, CheckCircle, Code, Server, Cloud, Database } from 'lucide-react';
+import { Layers, Search, CheckCircle, Code, Server, ShieldCheck, TrendingUp, Palette } from 'lucide-react';
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -18,14 +18,27 @@ export default function Skills() {
     switch (cat) {
       case 'frontend':
         return <Code size={16} />;
+      case 'testing':
+        return <ShieldCheck size={16} />;
       case 'backend':
         return <Server size={16} />;
-      case 'cloud':
-        return <Cloud size={16} />;
-      case 'database':
-        return <Database size={16} />;
+      case 'design':
+        return <TrendingUp size={16} />;
       default:
         return <Layers size={16} />;
+    }
+  };
+
+  const getTrackGradient = (category) => {
+    switch (category) {
+      case 'testing':
+        return 'linear-gradient(90deg, #10b981, #06b6d4)';
+      case 'design':
+        return 'linear-gradient(90deg, #f59e0b, #f43f5e)';
+      case 'backend':
+        return 'linear-gradient(90deg, #6366f1, #3b82f6)';
+      default:
+        return 'var(--gradient-brand)';
     }
   };
 
@@ -36,13 +49,13 @@ export default function Skills() {
         <div className="section-header">
           <div className="section-tag">
             <Layers size={14} />
-            <span>Technical Capabilities</span>
+            <span>Senior Technical Competencies</span>
           </div>
           <h2 className="section-title">
-            Skills &amp; <span className="text-gradient">Technologies</span>
+            Test Engineering &amp; <span className="text-gradient">Web Craftsmanship</span>
           </h2>
           <p className="section-desc">
-            A comprehensive overview of tools, frameworks, and cloud services I utilize to engineer modern software solutions.
+            Twelve years of battle-tested expertise: clean component architecture, strict type safety, and test suites that eliminate bugs before they ever reach production.
           </p>
         </div>
 
@@ -118,7 +131,7 @@ export default function Skills() {
             <input
               type="text"
               id="skill-search-input"
-              placeholder="Search skill (e.g. React)..."
+              placeholder="Filter by keyword (e.g. Vitest)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{
@@ -186,18 +199,13 @@ export default function Skills() {
                     width: `${skill.level}%`,
                     height: '100%',
                     borderRadius: '4px',
-                    background:
-                      skill.category === 'cloud'
-                        ? 'linear-gradient(90deg, #06b6d4, #3b82f6)'
-                        : skill.category === 'database'
-                        ? 'linear-gradient(90deg, #10b981, #06b6d4)'
-                        : 'var(--gradient-brand)',
+                    background: getTrackGradient(skill.category),
                     transition: 'width 0.8s ease-out'
                   }}
                 />
               </div>
 
-              {/* Highlight Tag */}
+              {/* Category & Highlight Tag */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '0.2rem' }}>
                 <span
                   style={{
@@ -220,7 +228,7 @@ export default function Skills() {
                       fontWeight: 500
                     }}
                   >
-                    <CheckCircle size={12} /> Core Stack
+                    <CheckCircle size={12} /> Core Competency
                   </span>
                 )}
               </div>

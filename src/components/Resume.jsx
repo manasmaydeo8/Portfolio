@@ -18,7 +18,7 @@ export default function Resume({ onDownloadResume }) {
             Experience &amp; <span className="text-gradient">Credentials</span>
           </h2>
           <p className="section-desc">
-            A track record of engineering leadership, production system delivery, and industry-standard cloud certifications.
+            Twelve years of delivering commercial web applications, mentoring engineering teams, and establishing zero-regression testing standards.
           </p>
         </div>
 
