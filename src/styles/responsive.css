@@ -1,0 +1,236 @@
+/* Mobile-First Responsive Breakpoint Architecture
+   Breakpoints: 360px (mobile min), 768px (tablet), 1024px (desktop), 1440px (ultrawide)
+*/
+
+/* Strict Horizontal Overflow Prevention */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================================
+   BASE / MOBILE FIRST (< 768px, starting at 360px)
+   ======================================================== */
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+}
+
+.section-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Projects Grid: Single Column Stack on Mobile */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Skills Grid: Single Column Stack on Mobile */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* About Layout: Stack on Mobile */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Contact Grid: Stack on Mobile */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Navbar utilities */
+.nav-desktop-links {
+  display: none !important;
+}
+
+.nav-mobile-toggle {
+  display: inline-flex !important;
+}
+
+.mobile-menu-drawer {
+  display: flex;
+}
+
+/* Hero Content Stack on Mobile */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.hero-cta-group .btn {
+  width: 100%;
+}
+
+/* ========================================================
+   TABLET BREAKPOINT (min-width: 768px)
+   ======================================================== */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    padding-inline: 1.5rem;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .section-desc {
+    font-size: 1.05rem;
+  }
+
+  /* Projects Grid: 2 Columns on Tablet */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  /* Skills Grid: 2 Columns on Tablet */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Nav Links Visible on Tablet and Up */
+  .nav-desktop-links {
+    display: flex !important;
+  }
+
+  .nav-mobile-toggle {
+    display: none !important;
+  }
+
+  .mobile-menu-drawer {
+    display: none !important;
+  }
+
+  .hero-cta-group {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .hero-cta-group .btn {
+    width: auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ========================================================
+   DESKTOP BREAKPOINT (min-width: 1024px)
+   ======================================================== */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 980px;
+    padding-inline: 2rem;
+  }
+
+  .section {
+    padding: 6rem 0;
+  }
+
+  .section-title {
+    font-size: 2.65rem;
+  }
+
+  /* Projects Grid: 3 Columns on Desktop */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* About Grid: Side-by-Side on Desktop */
+  .about-grid {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-container {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+/* ========================================================
+   LARGE DESKTOP / ULTRAWIDE (min-width: 1440px)
+   ======================================================== */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1240px;
+    padding-inline: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+}

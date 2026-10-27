@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 /**
  * LazyImage component
- * Features: native loading="lazy", shimmer placeholder skeleton, error fallback, fade-in transition
+ * Features:
+ * - IntersectionObserver visibility detection
+ * - Native loading="lazy" + decoding="async"
+ * - Shimmer skeleton placeholder
+ * - Modern WebP with fallback
+ * - Fade-in transition
  */
 export default function LazyImage({
   src,
@@ -13,11 +19,17 @@ export default function LazyImage({
   height,
   ...props
 }) {
+  const [containerRef, isVisible] = useIntersectionObserver({
+    rootMargin: '150px',
+    threshold: 0.05
+  });
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   return (
     <div
+      ref={containerRef}
       className={`lazy-image-wrapper ${className}`}
       style={{
         position: 'relative',
@@ -29,7 +41,7 @@ export default function LazyImage({
       }}
     >
       {/* Skeleton Shimmer while loading */}
-      {!isLoaded && !hasError && (
+      {(!isLoaded || !isVisible) && !hasError && (
         <div
           className="skeleton"
           style={{
@@ -41,8 +53,8 @@ export default function LazyImage({
         />
       )}
 
-      {/* Main Image */}
-      {!hasError ? (
+      {/* Main Image once in viewport */}
+      {isVisible && !hasError ? (
         <img
           src={src}
           alt={alt}
@@ -60,7 +72,7 @@ export default function LazyImage({
           }}
           {...props}
         />
-      ) : (
+      ) : hasError ? (
         <div
           style={{
             position: 'absolute',
@@ -74,7 +86,7 @@ export default function LazyImage({
         >
           Failed to load image
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

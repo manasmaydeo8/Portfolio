@@ -1,9 +1,27 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  server: {
+    port: 5173,
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:8000',
+        changeOrigin: true
+      }
+    }
+  },
+  plugins: [
+    react(),
+    visualizer({
+      filename: 'dist/stats.html',
+      title: 'Portfolio Bundle Visualizer',
+      gzipSize: true,
+      brotliSize: true,
+      open: false
+    })
+  ],
   build: {
     target: 'esnext',
     cssMinify: true,
@@ -13,15 +31,15 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react'
+              return 'vendor-react';
             }
             if (id.includes('lucide-react')) {
-              return 'vendor-icons'
+              return 'vendor-icons';
             }
           }
-        },
-      },
+        }
+      }
     },
-    chunkSizeWarningLimit: 600,
-  },
-})
+    chunkSizeWarningLimit: 600
+  }
+});
